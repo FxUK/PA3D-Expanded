@@ -2,6 +2,8 @@
 
 by **FxUK** · free fan mod · MIT licence (credit to FxUK must be kept, see [LICENSE](LICENSE))
 
+![PA3D Expanded in game: a whole prison from above, with cell blocks, a canteen, a library and yards in 3D](docs/screenshot2.jpg)
+
 ![PA3D Expanded in game: cutaway walls, cells, a gym with a boxing ring and staff in 3D](docs/screenshot.jpg)
 
 PA3D Expanded turns Prison Architect's hidden 3D mode into a full isometric 3D view. It includes:
