@@ -15,7 +15,7 @@ PA3D Expanded turns Prison Architect's hidden 3D mode into a full isometric 3D v
 - people sitting on seats, shadows and lamp light
 
 > **Made with AI assistance.** Much of the code, the model generators and the documentation were written with an AI
-> coding assistant (Claude, by Anthropic), directed, tested and reviewed in game by FxUK.
+> coding assistant (Claude, by Anthropic), directed, tested and reviewed in game by FxUK.  Whilst I am a software developer, I have not written any of the code for this mod myself and have been using it more so for seeing the capabilities of Claude on a game I absolutely love (probably one of my favorites of all time).
 
 > **Released unfinished, as is.** I am not committed to developing it further; updates will only come if time
 > permits. You are welcome to improve, develop and expand it. The licence allows it, as long as the credit to FxUK
