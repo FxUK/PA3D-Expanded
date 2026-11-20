@@ -1,0 +1,14 @@
+# PA3aiD DLL source style (clang-format from the toolchain; run on src/parts/*.inc and src/main.cpp)
+BasedOnStyle: LLVM
+IndentWidth: 4
+ColumnLimit: 150
+SortIncludes: Never
+ReflowComments: false
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: true
+AllowShortBlocksOnASingleLine: Always
+PointerAlignment: Left
+SpacesBeforeTrailingComments: 6
+BreakBeforeBraces: Attach
+IndentCaseLabels: true

@@ -1,0 +1,54 @@
+LIBRARY glu32
+EXPORTS
+    gluBuild2DMipmaps
+    gluErrorString
+    gluLookAt
+    gluOrtho2D
+    gluPerspective
+    gluUnProject
+    gluBeginCurve = paiso_fwd_gluBeginCurve
+    gluBeginPolygon = paiso_fwd_gluBeginPolygon
+    gluBeginSurface = paiso_fwd_gluBeginSurface
+    gluBeginTrim = paiso_fwd_gluBeginTrim
+    gluBuild1DMipmaps = paiso_fwd_gluBuild1DMipmaps
+    gluCylinder = paiso_fwd_gluCylinder
+    gluDeleteNurbsRenderer = paiso_fwd_gluDeleteNurbsRenderer
+    gluDeleteQuadric = paiso_fwd_gluDeleteQuadric
+    gluDeleteTess = paiso_fwd_gluDeleteTess
+    gluDisk = paiso_fwd_gluDisk
+    gluEndCurve = paiso_fwd_gluEndCurve
+    gluEndPolygon = paiso_fwd_gluEndPolygon
+    gluEndSurface = paiso_fwd_gluEndSurface
+    gluEndTrim = paiso_fwd_gluEndTrim
+    gluErrorUnicodeStringEXT = paiso_fwd_gluErrorUnicodeStringEXT
+    gluGetNurbsProperty = paiso_fwd_gluGetNurbsProperty
+    gluGetString = paiso_fwd_gluGetString
+    gluGetTessProperty = paiso_fwd_gluGetTessProperty
+    gluLoadSamplingMatrices = paiso_fwd_gluLoadSamplingMatrices
+    gluNewNurbsRenderer = paiso_fwd_gluNewNurbsRenderer
+    gluNewQuadric = paiso_fwd_gluNewQuadric
+    gluNewTess = paiso_fwd_gluNewTess
+    gluNextContour = paiso_fwd_gluNextContour
+    gluNurbsCallback = paiso_fwd_gluNurbsCallback
+    gluNurbsCurve = paiso_fwd_gluNurbsCurve
+    gluNurbsProperty = paiso_fwd_gluNurbsProperty
+    gluNurbsSurface = paiso_fwd_gluNurbsSurface
+    gluPartialDisk = paiso_fwd_gluPartialDisk
+    gluPickMatrix = paiso_fwd_gluPickMatrix
+    gluProject = paiso_fwd_gluProject
+    gluPwlCurve = paiso_fwd_gluPwlCurve
+    gluQuadricCallback = paiso_fwd_gluQuadricCallback
+    gluQuadricDrawStyle = paiso_fwd_gluQuadricDrawStyle
+    gluQuadricNormals = paiso_fwd_gluQuadricNormals
+    gluQuadricOrientation = paiso_fwd_gluQuadricOrientation
+    gluQuadricTexture = paiso_fwd_gluQuadricTexture
+    gluScaleImage = paiso_fwd_gluScaleImage
+    gluSphere = paiso_fwd_gluSphere
+    gluTessBeginContour = paiso_fwd_gluTessBeginContour
+    gluTessBeginPolygon = paiso_fwd_gluTessBeginPolygon
+    gluTessCallback = paiso_fwd_gluTessCallback
+    gluTessEndContour = paiso_fwd_gluTessEndContour
+    gluTessEndPolygon = paiso_fwd_gluTessEndPolygon
+    gluTessNormal = paiso_fwd_gluTessNormal
+    gluTessProperty = paiso_fwd_gluTessProperty
+    gluTessVertex = paiso_fwd_gluTessVertex

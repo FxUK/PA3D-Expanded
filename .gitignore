@@ -1,0 +1,15 @@
+# build output and binaries
+dll/build/
+*.dll
+*.exe
+*.zip
+# game-derived art and generated assets (shipped only in the release zip)
+*.rgba
+*.png
+*.obj
+# local files
+*.log
+*.ini
+__pycache__/
+*.pyc
+*.bak

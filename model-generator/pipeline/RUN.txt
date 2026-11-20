@@ -1,0 +1,41 @@
+Model pipeline (run in this order, from this folder; DATA = the extracted stock game data folder, OUT = a NEW, EMPTY output folder -
+make_models makes fewer models when OUT already holds files from an earlier run):
+  python -I ..\make_models.py DATA OUT
+  python -I boiler.py <folder that holds full\data> OUT
+  python -I actor.py  <folder that holds full\data> OUT
+  python -I ppl3.py   DATA OUT          (people repainted from stock bodies; paints its own exact colour swatches into the atlas)
+  python -I variants.py DATA OUT        (numbered sprite variants get their base model; crops scale by stage)
+  python -I heads.py  DATA OUT          (prisoner head sprites: OUT\heads.rgba -> PA3aiD\heads.rgba, OUT\heads.h -> dll\src\heads.h)
+  python -I headswap.py DATA\shapes OUT\heads3d   (16 body x head models -> PA3aiD\heads3d)
+  python -I items.py  DATA OUT          (loose-item sprites -> dll\src\items.h)
+  python -I foodtail.py OUT\data\shapes   (serving table food moved last + '# PA3aiD food tail N': the DLL hides it when the table is empty)
+  python -I kitchen.py OUT\data\shapes KOUT DATA   (kitchen + canteen models textured from their own three-quarter sprites: top and
+                                         front split, sides extrapolated, relief detail added; KOUT gets them and the atlas: copy
+                                         KOUT\* over OUT\data\shapes. Run it on shapes that have NOT had kitchen.py yet, or the
+                                         textures go into the atlas twice)
+  python -I skinall.py FULL SOUT DATA   (FULL = OUT\data\shapes with KOUT copied over it. Every other generated model re-textured from its
+                                         own sprite where the sprite fits (outline and colour checks), relief from the sprite on its
+                                         main flat top; the atlas is doubled to 4096 for room. SOUT\skinall_report.txt says why each was
+                                         skipped. Copy SOUT\* over FULL; that is the set to install.)
+  python -I food.py FOUT DATA           (1.9.128: 3D models for the 60 DLC food sprites - crates, egg trays, pots, pans, roasting trays,
+                                         bowls, single items raised from their sprite - with their own texture sheet. NOT for data\shapes
+                                         (the game never uses models for stack food): copy FOUT\food.txt and FOUT\food.rgba to PA3aiD\food3d,
+                                         the DLL draws them. FOUT also gets each .obj + objects-maps.png for obj_prev.py)
+  python -I objcheck.py OUT\data\shapes (every model valid: "bad: 0")
+Then copy OUT\data\shapes\* to PA3aiD\models_current and, with the game closed, to the game's data\shapes.
+
+Checks:
+  python -I obj_prev.py OUT\data\shapes preview.png name1 name2 ...     3 views of each model
+  python -I head_prev.py STOCK_SHAPES ATLAS_PNG HEADS_RGBA OUT.png       the DLL's prisoner head overlay, without the game
+  python -I samemodels.py OLD\data\shapes NEW\data\shapes                did anything change? same shapes and face colours
+                                                                         (uvs move when swatches are handed out in another order)
+  python -I liveness.py DATA OUT                                         which make_models functions still shape the output
+                                                                         (unused ones go to ..\retired_generators.py)
+
+Atlas rule: make_models and ppl3 never place swatches or art in any atlas block that a stock model's textured triangles cover
+(their whole uv footprint, wrapped like the GPU). Black parts of stock models used to be painted over. ppl3 recolours whole
+triangles (a single moved corner stretched a face across the atlas: garbage on faces).
+
+Stock data copy (do not edit): PA3aiD\stock_data\full\data  (DATA = that folder; the 'folder that holds full\data' = PA3aiD\stock_data).
+
+objlib.py (1.9.122): shared atlas-colour / box / ring / cylinder / OBJ writer for ring, chest, chesstable, sortingtable, ovaltable, mail (books.py keeps its own two-colour books). Old copies: old_1_9_122\.
